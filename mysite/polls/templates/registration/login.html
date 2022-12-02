@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Authentication</h3>
+
+{% if form.errors %}
+    <div>
+        <p>Incorrect login or password</p>
+    </div>
+{% endif %}
+{% if user.is_authenticated %}
+    <div>
+        <p>You are logged in<a href="{% url 'logout' %}">EXIT</a></p>
+    </div>
+{% else %}
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>{{ form.username.label_tag }}</td>
+                <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
+            </tr>
+        </table>
+        <button type="submit">ENTER</button>
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+{% endif %}
+
+
+
+{% endblock %}
+

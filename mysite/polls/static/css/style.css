@@ -1,0 +1,36 @@
+img{
+    width: 300px;
+}
+nav{
+    background: black;
+    padding: 15px;
+}
+a{
+    color: #a9ffd1;
+    font-family: cursive;
+    text-decoration: none;
+    padding-right: 15px;
+    font-size: 24px;
+}
+a:hover{
+    color: #ff0000;
+}
+h2{
+    text-align: center;
+    margin: 15px 25px;
+}
+.non_avatar{
+    width: 300px;
+    background: linear-gradient(45deg, black, #6d0000, #ff0000);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    margin: 50px 50px;
+}
+#non_avatar{
+    color: white;
+    font-family: cursive;
+    text-align: center;
+}
+
+
